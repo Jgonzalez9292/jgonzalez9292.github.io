@@ -223,8 +223,8 @@ form button:hover {
         content: "below";
     }
     #firstWebsite{
-        scale:80%;
+        scale:120%;
         flex-direction: column;
-        margin:-50px 0px -50px 0px;
+        margin:10px 0px 60px 0px;
     }
 }
