@@ -10,6 +10,9 @@ function toggleNav() {
     }
 }
 
+//opens a webpage on click
+function imgWindow() {
+    window.open("http://vowelsband.fun") }
 
 //Takes in the current hour to give the user a proper greeting
 const currentHour = new Date().getHours();
