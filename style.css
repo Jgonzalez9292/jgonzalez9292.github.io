@@ -30,7 +30,80 @@ header {
 .personal-info {
     margin-left: 20px;
 }
+/*toggle button style*/
 
+.toggle-btn {
+
+    background-color: #1f1f1f;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 1px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+
+}
+
+.toggle-btn:before {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100%;
+    background-image: linear-gradient(
+        120deg,
+        rgba(255,255,255,0) 30%,
+        rgba(255,255,255,.8),
+        rgba(255,255,255,0) 70%
+    );
+    top: 0;
+    left: -100px;
+    animation: shine 3s infinite linear;
+}
+
+@keyframes shine {
+    0% {left: -100px}
+    20% {left: 100%}
+    100% {left: 100%}
+}
+
+.toggle-btn:hover{
+    background-color: #575757;
+    color: #00bcd4;
+}
+
+/*navigation bar styles*/
+
+.navbar {
+    margin:auto;
+    list-style-type: none;
+    background-color: #1f1f1f;
+    overflow: hidden;
+    text-align: center;
+}
+
+.navbar #name {
+    color:white;
+    text-align: left;
+    padding: 14px 20px;
+}
+
+.navbar li {
+    display: inline-block;
+}
+
+.navbar a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background-color: #575757;
+}
 nav ul {
     list-style: none;
     margin: 0;
@@ -52,6 +125,7 @@ nav ul li a:hover {
 }
 
 /* Section Styles */
+
 h2 {
     color: #00bcd4;
 }
@@ -108,89 +182,49 @@ form button {
 form button:hover {
     background-color: #0097a7;
 }
+.wrapper{
+    width: 58.526585%;
+    margin:0 auto;
+}
+.resize{
+    width:100%;
+    height:auto;
+}
+#firstWebsite{
+    scale:60%;
+    cursor: pointer;
+    margin-left:150px;
+    margin-top:-800px;
+    margin-bottom:-375px;
+}
+#imagePosition::after{
+    content: "to the right";
+}
 
-/* Media Queries */
-@media (max-width: 768px) {
+/*Styles for smaller screens*/
+@media screen and (max-width:768px)
+{
+    body{
+        text-align: center;
+    }
     header {
         flex-direction: column;
+        margin:0px;
     }
-
-    nav ul {
-        display: none;
+    .toggle-btn{
+        margin-top: 25px;
     }
-
-    nav.active ul {
+    .navbar{
         display: block;
+        padding-top:17px;
+        text-align: center;
     }
-}
-
-.toggle-btn {
-
-    background-color: #1f1f1f;
-    color: white;
-    padding: 10px 20px;
-    font-size: 16px;
-    border: none;
-    border-radius: 1px;
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-
-}
-
-.toggle-btn:before {
-    content: '';
-    position: absolute;
-    width: 100px;
-    height: 100%;
-    background-image: linear-gradient(
-        120deg,
-        rgba(255,255,255,0) 30%,
-        rgba(255,255,255,.8),
-        rgba(255,255,255,0) 70%
-    );
-    top: 0;
-    left: -100px;
-    animation: shine 3s infinite linear;
-}
-
-@keyframes shine {
-    0% {left: -100px}
-    20% {left: 100%}
-    100% {left: 100%}
-}
-
-.toggle-btn:hover{
-    background-color: #575757;
-    color: #00bcd4;
-}
-
-.navbar {
-    margin:auto;
-    list-style-type: none;
-    background-color: #1f1f1f;
-    overflow: hidden;
-    text-align: center;
-}
-
-.navbar #name {
-    color:white;
-    text-align: left;
-    padding: 14px 20px;
-}
-
-.navbar li {
-    display: inline-block;
-}
-
-.navbar a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 20px;
-    text-decoration: none;
-}
-
-.navbar a:hover {
-    background-color: #575757;
+    #imagePosition::after{
+        content: "below";
+    }
+    #firstWebsite{
+        scale:80%;
+        flex-direction: column;
+        margin:-50px 0px -50px 0px;
+    }
 }
