@@ -1,72 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" href="style.css">
-
-</head>
-<body>
-    <header>
-        <div class="header-content">
-            <img src="/images/justin.jpeg" alt="Professional Headshot" class="headshot">
-            <div class="personal-info">
-                <h1>Justin Gonzalez</h1>
-                <p>IT Student</p>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <!--Header and navigation bar-->
+        <header>
+            <div class="header-content">
+                <img src="/images/justinHead.jpg" alt="Professional Headshot" class="headshot">
+                <div class="personal-info">
+                    <h1>Justin Gonzalez</h1>
+                    <p>IT Student</p>
+                </div>
             </div>
-        </div>
-        <button id="navButton" class='toggle-btn' onclick="toggleNav()">Navigation</button>
-        <nav id="navbar" style="display:none">
-            <ul class="navbar">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section class="intro">
-            <h2>Welcome</h2>
-            <p>Good <b id="timeOfDay" style="font-weight: 100;">morning</b>! My name is Justin Gonzalez.</p>
-            <p>Welcome to my professional portfolio website.</p>
-        </section>
-        <section class="experience">
-            <h2>Experience</h2>
-            <p>I am currently seeking experience opportunites!</p>
-            <p>You can view my first website created by clicking the image</p>
-            <p><b id="imagePosition"style='font-weight:100;'></b>! </p>
-        </section>
-        <div class="wrapper">
-            <img class="resize" id="firstWebsite"src="/images/vowels.jpg" onclick="imgWindow()">           
-        </div>    
-        <section class="experience">
-            <h2>Education</h2>
-            <p>Kennesaw State University</p>
-            <p>Information Technology</p>
-            <p>Cybersecurity Concentration</p>
-            <p>Projected Graduation Date: May 2027</p>
-        </section>
-        <section class="skills">
-            <h2>Skills</h2>
-            <div class="skill"></div>
+            <button id="navButton" class='toggle-btn' onclick="toggleNav()">Navigation</button>
+            <nav id="navbar" style="display:none">
+                <ul class="navbar">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <!--Welcome section-->
+            <div>
+                <img id="firstWebsite1"src="images/vowels.jpg" onclick="imgWindow()">           
+            </div>  
+            <section class="intro">
+                <h2>Welcome</h2>
+                <p>Good <b id="timeOfDay" style="font-weight: 100;">morning</b>! My name is Justin Gonzalez.</p>
+                <p>Welcome to my professional portfolio website.</p><br>
+            </section>
+            <!--Project showcasing section-->
+            <section class="pastWork">
+                <h2>Past Work</h2>
+                <p>You can view my first website created by clicking the image <b id="imagePosition"style='font-weight:100;'></b>! </p>
+                <p>I will continue to add future projects here.</p>
+            </section>
+            <div class="wrapperd">
+                <img class="resized" id="firstWebsite"src="images/vowels.jpg" onclick="imgWindow()">           
+            </div>    
+            <!--Education section-->
+            <section class="education">
+                <h2>Education</h2>
+                <p>Kennesaw State University</p>
+                <p>Information Technology</p>
+                <p>Cybersecurity Concentration</p>
+                <p>Projected Graduation Date: May 2027</p>
+            </section>
+            <!--Skills section-->
+            <section class="skills">
+                <h2>Skills</h2>
+                <div class="skill"></div>
                 <p>C#</p>
-                <div class="progress-bar"><span style="width: 85%;"></span></div>
-            </div>
-            <div class="skill">
+                <div class="progress-bar"><span style="width: 80%;"></span></div>
+
+                <div class="skill"></div>
+                <p>SQL</p>
+                <div class="progress-bar"><span style="width: 70%;"></span></div>
+
+                <div class="skill"></div>
                 <p>HTML</p>
                 <div class="progress-bar"><span style="width: 70%;"></span></div>
-            </div>
-            <div class="skill">
+
+                <div class="skill"></div>
                 <p>CSS</p>
                 <div class="progress-bar"><span style="width: 60%;"></span></div>
-            </div>
-            <div class="skill">
+
+                <div class="skill"></div>
+                <p>Networking</p>
+                <div class="progress-bar"><span style="width: 40%;"></span></div>
+
+                <div class="skill"></div>
                 <p>JavaScript</p>
-                <div class="progress-bar"><span style="width: 25%;"></span></div>
-            </div>
-        </section>
-    </main>
-    <script src="index.js"></script>
-</body>
+                <div class="progress-bar"><span style="width: 20%;"></span></div>
+            </section>
+        </main>
+        <!--Import JavaScript-->
+        <script src="index.js"></script>
+    </body>
 </html>
