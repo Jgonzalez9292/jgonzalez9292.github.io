@@ -130,10 +130,21 @@ h2 {
     color: #00bcd4;
 }
 
-.intro, .experience, .skills, .about, .contact {
+.intro, .pastWork, .education, .skills, .about, .background, .experiences, .goals, .contact{
     padding: 20px;
 }
-
+.intro, .pastWork, .education{
+    margin-right: 60%;
+}
+.background{
+    margin: -650px 100px 0 50%;
+}
+.experiences{
+    margin: -20px 100px 0 50%;
+}
+.goals{
+    margin:0px 0 0 50%;
+}
 .skill {
     margin-bottom: 10px;
 }
@@ -151,7 +162,7 @@ h2 {
     background-color: #00bcd4;
     border-radius: 10px;
 }
-
+/*Form Styles*/
 form {
     display: flex;
     flex-direction: column;
@@ -182,26 +193,33 @@ form button {
 form button:hover {
     background-color: #0097a7;
 }
-.wrapper{
-    width: 58.526585%;
-    margin:0 auto;
-}
-.resize{
-    width:100%;
-    height:auto;
-}
+/*Image Styles*/
 #firstWebsite{
-    scale:60%;
+    display:none;
+}
+
+#firstWebsite1{
+    max-width: 40%;
+    height:500px;
+    width: auto;
+    object-fit:contain;
+    margin:80px 15% 0 0;
+    float: right;
     cursor: pointer;
-    margin-left:150px;
-    margin-top:-800px;
-    margin-bottom:-375px;
+}
+#aboutPhoto{
+    max-width: 35%;
+    height: 500px;
+    width: auto;
+    object-fit: contain;
+    margin: 150px 0px 0px 10%;
 }
 #imagePosition::after{
     content: "to the right";
 }
 
-/*Styles for smaller screens*/
+
+/*Styles for tablets and phone screens*/
 @media screen and (max-width:768px)
 {
     body{
@@ -222,9 +240,28 @@ form button:hover {
     #imagePosition::after{
         content: "below";
     }
+    #firstWebsite1{
+        display: none;
+    }
     #firstWebsite{
-        scale:120%;
-        flex-direction: column;
-        margin:10px 0px 60px 0px;
+        display:inline;
+        height:300px;
+        width:auto;
+        margin:0px 0px 0px 0px;
+    }
+    #aboutPhoto{
+        max-width: 100%;
+        height:400px;
+        margin:30px 0px 0px 0px;
+    }
+    .intro, .pastWork, .education{
+        margin-right: 0%;
+    }
+    .about,.background,.experiences,.goals{
+        max-width: 100%;
+        margin: 0 0 0 0;
+    }
+    #message{
+        height:60px;
     }
 }
