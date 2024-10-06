@@ -30,6 +30,7 @@ header {
 .personal-info {
     margin-left: 20px;
 }
+
 /*toggle button style*/
 
 .toggle-btn {
@@ -163,22 +164,15 @@ h2 {
     border-radius: 10px;
 }
 /*Form Styles*/
-form {
+form, .input-control{
     display: flex;
     flex-direction: column;
+    background-color: #121212;
+
 }
 
-form label {
+form label{
     margin-bottom: 5px;
-}
-
-form input, form textarea {
-    padding: 10px;
-    margin-bottom: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: #1f1f1f;
-    color: #e0e0e0;
 }
 
 form button {
@@ -193,6 +187,35 @@ form button {
 form button:hover {
     background-color: #0097a7;
 }
+
+.input-control input{
+    border: 2px solid #1f1f1f;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #1f1f1f;
+    color: #e0e0e0;
+    width:100%;
+}
+
+.input-control input:focus{
+    outline:0;
+}
+
+.input-control.success input{
+    border-color:#0097a7;
+}
+
+.input-control.error input{
+    border-color: #ff3860;
+}
+
+.input-control .error {
+    color: #ff3860;
+    font-size:12px;
+    height:20px;
+}
+
 /*Image Styles*/
 #firstWebsite{
     display:none;
@@ -261,6 +284,10 @@ form button:hover {
         max-width: 100%;
         margin: 0 0 0 0;
     }
+    #message{
+        height:60px;
+    }
+}
     #message{
         height:60px;
     }
