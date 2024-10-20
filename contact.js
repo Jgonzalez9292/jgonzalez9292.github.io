@@ -46,6 +46,7 @@ form.addEventListener('submit', function(event) {
         });
     }
     else {
+        alert("Server Connection Failed. Please try again later.");
         console.log('Form validation failed. Not sending data to server.');}
 });
 
