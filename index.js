@@ -21,7 +21,7 @@ let timeOfDay;
 if(currentHour >= 0 && currentHour <12){
     timeOfDay = "morning"
 }
-if(currentHour >= 12 && currentHour < 17){
+else if(currentHour >= 12 && currentHour < 17){
     timeOfDay = 'afternoon'
 }
 else{
