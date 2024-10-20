@@ -1,3 +1,4 @@
+console.log('node server.js');
 //used to toggle the navigation bar off and on
 function toggleNav() {
     var nav = document.getElementById("navbar");
