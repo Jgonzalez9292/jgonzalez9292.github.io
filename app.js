@@ -5,8 +5,8 @@ const nodemailer = require('nodemailer');
 const path = require('path');
 const PORT = process.env.PORT || 3000;
 
-app.set("view engine", "ejs");
-app.use("/public", express.static("public"));
+//app.set("view engine", "ejs");
+//app.use("/public", express.static("public"));
 
 // Configure the transporter
 const transporter = nodemailer.createTransport({
