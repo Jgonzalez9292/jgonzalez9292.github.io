@@ -42,7 +42,7 @@ form.addEventListener('submit', function(event) {
         })
         .catch(error => {
             console.error('Error:', error);
-            alert('Error sending message. Please try again later.');
+            alert(data);
         });
     }
     else {
