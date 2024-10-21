@@ -3,9 +3,9 @@ const app = express();
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
 const path = require('path');
+const cors = require('cors');
 const PORT = process.env.PORT || 3000;
 
-const cors = require('cors');
 app.use(cors({
     origin: 'https://jgonzalez9292.github.io'
 }));
