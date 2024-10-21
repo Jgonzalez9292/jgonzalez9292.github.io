@@ -1,0 +1,289 @@
+/* Global Styles */
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #1f1f1f;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+}
+
+.headshot {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.personal-info {
+    margin-left: 20px;
+}
+
+/*toggle button style*/
+
+.toggle-btn {
+
+    background-color: #1f1f1f;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 1px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+
+}
+
+.toggle-btn:before {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100%;
+    background-image: linear-gradient(
+        120deg,
+        rgba(255,255,255,0) 30%,
+        rgba(255,255,255,.8),
+        rgba(255,255,255,0) 70%
+    );
+    top: 0;
+    left: -100px;
+    animation: shine 3s infinite linear;
+}
+
+@keyframes shine {
+    0% {left: -100px}
+    20% {left: 100%}
+    100% {left: 100%}
+}
+
+.toggle-btn:hover{
+    background-color: #575757;
+    color: #00bcd4;
+}
+
+/*navigation bar styles*/
+
+.navbar {
+    margin:auto;
+    list-style-type: none;
+    background-color: #1f1f1f;
+    overflow: hidden;
+    text-align: center;
+}
+
+.navbar #name {
+    color:white;
+    text-align: left;
+    padding: 14px 20px;
+}
+
+.navbar li {
+    display: inline-block;
+}
+
+.navbar a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background-color: #575757;
+}
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #e0e0e0;
+}
+
+nav ul li a:hover {
+    color: #00bcd4;
+}
+
+/* Section Styles */
+
+h2 {
+    color: #00bcd4;
+}
+
+.intro, .pastWork, .education, .skills, .about, .background, .experiences, .goals, .contact{
+    padding: 20px;
+}
+.intro, .pastWork, .education{
+    margin-right: 60%;
+}
+.background{
+    margin: -650px 100px 0 50%;
+}
+.experiences{
+    margin: -20px 100px 0 50%;
+}
+.goals{
+    margin:0px 0 0 50%;
+}
+.skill {
+    margin-bottom: 10px;
+}
+
+.progress-bar {
+    background-color: #333;
+    width: 100%;
+    height: 20px;
+    border-radius: 10px;
+}
+
+.progress-bar span {
+    display: block;
+    height: 100%;
+    background-color: #00bcd4;
+    border-radius: 10px;
+}
+/*Form Styles*/
+form, .input-control{
+    display: flex;
+    flex-direction: column;
+    background-color: #121212;
+}
+
+form label{
+    margin-bottom: 5px;
+}
+
+form #button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #00bcd4;
+    color: #121212;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #0097a7;
+}
+
+.input-control input{
+    border: 2px solid #1f1f1f;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #1f1f1f;
+    color: #e0e0e0;
+    width:100%;
+}
+
+.input-control input:focus{
+    outline:0;
+}
+
+.input-control.success input{
+    border-color:#0097a7;
+}
+
+.input-control.error input{
+    border-color: #ff3860;
+}
+
+.input-control .error {
+    color: #ff3860;
+    font-size:12px;
+    height:20px;
+}
+
+/*Image Styles*/
+#firstWebsite{
+    display:none;
+}
+
+#firstWebsite1{
+    max-width: 40%;
+    height:500px;
+    width: auto;
+    object-fit:contain;
+    margin:80px 15% 0 0;
+    float: right;
+    cursor: pointer;
+}
+#aboutPhoto{
+    max-width: 35%;
+    height: 500px;
+    width: auto;
+    object-fit: contain;
+    margin: 150px 0px 0px 10%;
+}
+#imagePosition::after{
+    content: "to the right";
+}
+
+
+/*Styles for tablets and phone screens*/
+@media screen and (max-width:768px)
+{
+    body{
+        text-align: center;
+    }
+    header {
+        flex-direction: column;
+        margin:0px;
+    }
+    .toggle-btn{
+        margin-top: 25px;
+    }
+    .navbar{
+        display: block;
+        padding-top:17px;
+        text-align: center;
+    }
+    #imagePosition::after{
+        content: "below";
+    }
+    #firstWebsite1{
+        display: none;
+    }
+    #firstWebsite{
+        display:inline;
+        height:300px;
+        width:auto;
+        margin:0px 0px 0px 0px;
+    }
+    #aboutPhoto{
+        max-width: 100%;
+        height:400px;
+        margin:30px 0px 0px 0px;
+    }
+    .intro, .pastWork, .education{
+        margin-right: 0%;
+    }
+    .about,.background,.experiences,.goals{
+        max-width: 100%;
+        margin: 0 0 0 0;
+    }
+    #message{
+        height:60px;
+    }
+}
