@@ -5,6 +5,11 @@ const nodemailer = require('nodemailer');
 const path = require('path');
 const PORT = process.env.PORT || 3000;
 
+const cors = require('cors');
+app.use(cors({
+    origin: 'https://jgonzalez9292.github.io'
+}));
+
 //app.set("view engine", "ejs");
 //app.use("/public", express.static("public"));
 
