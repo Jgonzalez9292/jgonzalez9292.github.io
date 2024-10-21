@@ -3,15 +3,12 @@ const app = express();
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
 const path = require('path');
+const cors = require('cors'); //Import the cors package
+
 const PORT = process.env.PORT || 3000;
 
-const cors = require('cors');
-app.use(cors({
-    origin: 'https://jgonzalez9292.github.io'
-}));
-
-//app.set("view engine", "ejs");
-//app.use("/public", express.static("public"));
+app.set("view engine", "ejs");
+app.use("/public", express.static("public"));
 
 // Configure the transporter
 const transporter = nodemailer.createTransport({
@@ -28,6 +25,11 @@ app.use(bodyParser.json());
 
 // Serve static files from the "public" directory
 app.use(express.static(path.join(__dirname, 'public')));
+
+// Use CORS middleware
+app.use(cors({
+	origin: 'https://jgonzalez9292.github.io' //Allow requests from my GitHub Pages site
+}));
 
 // Route to handle form submission
 app.post('/', (req, res) => {
