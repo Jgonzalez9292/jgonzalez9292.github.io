@@ -1,62 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>About</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <!--Header and navigation bar-->
-        <header>
-            <div class="header-content">
-                <img src="/images/justinHead.jpg" alt="Professional Headshot" class="headshot">
-                <div class="personal-info">
-                    <h1>Justin Gonzalez</h1>
-                    <p>IT Student</p>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Justin Gonzalez</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="/images/justinHead.jpeg" alt="Professional Headshot of Justin Gonzalez" class="headshot">
+            <div class="personal-info">
+                <h1>Justin Gonzalez</h1>
+                <p>IT Student | Web Developer | Technical Problem Solver</p>
+            </div>
+        </div>
+
+        <button id="navButton" class="toggle-btn" onclick="toggleNav()">Navigation</button>
+
+        <nav id="navbar" style="display:none">
+            <ul class="navbar">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./projects.html">Projects</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./resume.html">Resume</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="page-container">
+        <section class="section-card">
+            <p class="eyebrow">About</p>
+            <h2>Who I Am</h2>
+            <p>
+                I’m Justin Gonzalez, an Information Technology student with a cybersecurity concentration at
+                Kennesaw State University. I enjoy building hands-on projects that help me turn technical concepts
+                into practical skills I can actually use.
+            </p>
+            <p>
+                My interests include web development, networking, security, and general IT problem solving.
+                I like working on projects that are both useful and easy to understand, whether that means
+                building a website, troubleshooting a technical issue, or learning a new tool.
+            </p>
+        </section>
+
+        <section class="section-card">
+            <h2>What I’m Building</h2>
+            <p>
+                Right now, I’m focused on building a robust portfolio that reflects both my technical background and my ability
+                to create polished, functional work. That includes personal web projects, class-related technical work,
+                and demo websites for small businesses.
+            </p>
+            <p>
+                My goal is to keep building practical experience through projects that show how I think, how I solve
+                problems, and how I apply what I’m learning.
+            </p>
+        </section>
+
+        <section class="section-card">
+            <h2>What Interests Me</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>Web Development</h3>
+                    <p>
+                        I enjoy building clean, modern websites that are easy to use and visually professional.
+                        I’m especially interested in creating small business websites that are simple, fast, and effective.
+                    </p>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Networking & IT</h3>
+                    <p>
+                        I’m also building experience in networking, troubleshooting, Linux, and technical tools that
+                        support real-world IT work.
+                    </p>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Security</h3>
+                    <p>
+                        With a cybersecurity concentration, I’m interested in learning how systems work, where they fail,
+                        and how to build stronger technical habits and practices.
+                    </p>
                 </div>
             </div>
-            <button id="navButton" class='toggle-btn' onclick="toggleNav()">Navigation</button>
-            <nav id="navbar" style="display:none">
-                <ul class="navbar">
-                    <li><a href="./">Home</a></li>
-                    <li><a href="./about">About</a></li>
-                    <li><a href="./contact">Contact</a></li>
-                </ul>
-            </nav>
-        </header>
-        <main>
-            <img id="aboutPhoto" src="/images/justin.jpeg" alt="About Photo">
-            <!--Personal about section-->
-            <section class="background">
-                <h2>Background</h2>
-                <p>I am an enthusiastic IT student interested in all things technology!</p>
-                <p>In my free time, I enjoy listening to music as well as playing drums and guitar.</p>
-                <p>You can also catch me getting outside, biking, or hiking.</p>
-                <p>I also enjoy spending time with my wife, son, and daughter!</p>
+        </section>
 
-            </section>
-            <!--Section describing experiences-->
-            <section class="experiences">
-                <h2>Experiences</h2>
-                <p>I am currently seeking experience opportunites!</p><br>
-                <p>I have completed the following crucial courses among many others:</p>
-                <p>Programming Principles 1 & 2, Database Systems, & Hardware/Software Concepts.</p><br>
-                <p>I am currently enrolled in the following courses:</p>
-                <p>Intro to Web Dev & Data Communications/Networking</p>
-            </section> 
-            <!--Personal Goals-->
-            <section class="goals">
-                <h2>Goals</h2>
-                <p>The following are my professional goals:</p><br>
-                <p>Graduate from KSU by Spring 2027.</p>
-                <p>Pursue an advanced networking certificate.</p>
-                <p>Find a career in Networking.</p>
-                <p>Hone my networking skills.</p>
-                <p>Become a Certified Ethical Hacker.</p>
-                <p>Use my skills to provide security.</p>
-            </section>
-        </main>
-        <script src="index.js"></script>
-    </body>
+        <section class="section-card">
+            <h2>Where I’m Headed</h2>
+            <p>
+                I’m continuing to develop my skills through coursework, labs, and portfolio projects while preparing for
+                future opportunities in IT and related technical fields. I want my work to reflect steady growth,
+                curiosity, and the ability to learn by building.
+            </p>
+            <p>
+                Along the way, I’m also exploring freelance web development as a practical way to create useful work,
+                build experience, and help local businesses improve their online presence.
+            </p>
+        </section>
+
+        <section class="cta section-card">
+            <h2>Let’s Connect</h2>
+            <p>
+                If you’d like to learn more about my work, talk about an opportunity, or reach out about a website project,
+                feel free to contact me.
+            </p>
+            <div class="hero-buttons">
+                <a href="./contact.html" class="btn-primary">Contact Me</a>
+                <a href="./index.html" class="btn-secondary">Back to Home</a>
+            </div>
+        </section>
+    </main>
+
+    <script src="/js/index.js"></script>
+</body>
 </html>

@@ -1,109 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Home</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <!--Header and navigation bar-->
-        <header>
-            <div class="header-content">
-                <img src="/images/justinHead.jpg" alt="Professional Headshot" class="headshot">
-                <div class="personal-info">
-                    <h1>Justin Gonzalez</h1>
-                    <p>IT Student</p>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Justin Gonzalez | Portfolio</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="/images/justinHead.jpeg" alt="Professional Headshot of Justin Gonzalez" class="headshot">
+            <div class="personal-info">
+                <h1>Justin Gonzalez</h1>
+                <p>IT Student | Web Developer | Technical Problem Solver</p>
+            </div>
+        </div>
+
+        <button id="navButton" class="toggle-btn" onclick="toggleNav()">Navigation</button>
+
+        <nav id="navbar" style="display:none">
+            <ul class="navbar">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./projects.html">Projects</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./resume.html">Resume</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="page-container">
+        <section class="hero section-card">
+            <div class="hero-text">
+                <p class="eyebrow">Portfolio</p>
+                <h2>Building practical skills through real projects</h2>
+                <p>
+                    I’m an Information Technology student with a cybersecurity concentration, building hands-on
+                    experience in web development, networking, and IT systems through practical projects and portfolio work.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="./projects.html" class="btn-primary">View Projects</a>
+                    <a href="./contact.html" class="btn-secondary">Contact Me</a>
                 </div>
             </div>
-            <button id="navButton" class='toggle-btn' onclick="toggleNav()">Navigation</button>
-            <nav id="navbar" style="display:none">
-                <ul class="navbar">
-                    <li><a href="./">Home</a></li>
-                    <li><a href="./about">About</a></li>
-                    <li><a href="./contact">Contact</a></li>
-                </ul>
-            </nav>
-        </header>
-        <main>
-            <!--Welcome section-->
-            <div>
-                <img id="firstWebsite1"src="images/vowels.jpg" onclick="imgWindow()">           
-            </div>  
-            <section class="intro">
-                <h2>Welcome</h2>
-                <p>Good <b id="timeOfDay" style="font-weight: 100;">morning</b>! My name is Justin Gonzalez.</p>
-                <p>Welcome to my professional portfolio website.</p><br>
-            </section>
-            <!--Project showcasing section-->
-            <section class="pastWork">
-                <h2>Past Work</h2>
-                <p>You can view my first website created by clicking the image <b id="imagePosition"style='font-weight:100;'></b>! </p>
-                <p>I will continue to add future projects here.</p>
-            </section>
-            <div class="wrapperd">
-                <img class="resized" id="firstWebsite"src="images/vowels.jpg" onclick="imgWindow()">           
-            </div>    
-            <!--Education section-->
-            <section class="education">
-                <h2>Education</h2>
-                <p>Kennesaw State University</p>
-                <p>Information Technology</p>
-                <p>Cybersecurity Concentration</p>
-                <p>Projected Graduation Date: May 2027</p>
-            </section>
-            <!--Skills section-->
-            <section class="skills">
-                <h2>Skills</h2>
-                <div class="skill"></div>
-                <p>C#</p>
-                <div class="progress-bar"><span style="width: 80%;"></span></div>
 
-                <div class="skill"></div>
-                <p>SQL</p>
-                <div class="progress-bar"><span style="width: 70%;"></span></div>
+            <div class="hero-preview">
+                <a id="slideshow-link" href="band-demo/index.html" target="_blank">
+                    <div class="slideshow-frame">
+                    <img
+                        id="slideshow-image"
+                        class="fade-slide active"
+                        src="images/band-website-preview.png"
+                        alt="Project preview"
+                    >
+                    </div>
+                </a>
 
-                <div class="skill"></div>
-                <p>HTML</p>
-                <div class="progress-bar"><span style="width: 70%;"></span></div>
-
-                <div class="skill"></div>
-                <p>CSS</p>
-                <div class="progress-bar"><span style="width: 60%;"></span></div>
-
-                <div class="skill"></div>
-                <p>Networking</p>
-                <div class="progress-bar"><span style="width: 40%;"></span></div>
-
-                <div class="skill"></div>
-                <p>JavaScript</p>
-                <div class="progress-bar"><span style="width: 20%;"></span></div>
-            </section>
-            <!-- Image Slider Section -->
-            <section class="slider-container">
-                <h2>Certificates</h2>
-                <div class="slides" id="slides">
-                    <div class="slide"><img src="images/certificates/Coding_Foundations.png" alt="Certificate: Coding Foundations"></div>
-                    <div class="slide"><img src="images/certificates/Web_Dev.png" alt="Certificate: Web Development"></div>
-                    <div class="slide"><img src="images/certificates/Front_End.png" alt="Certificate: Front-End for Beginners"></div>
-                    <div class="slide"><img src="images/certificates/Intro_Csharp.png" alt="Certificate: Introduction to C#"></div>
-                    <div class="slide"><img src="images/certificates/Csharp_Intermediate.png" alt="Certificate: C# Intermediate"></div>
-                    <div class="slide"><img src="images/certificates/Intro_C.png" alt="Certificate: Introduction to C"></div>
-                    <div class="slide"><img src="images/certificates/Intro_Python.png" alt="Certificate: Introduction to Python"></div>
-                    <div class="slide"><img src="images/certificates/Intro_SQL.png" alt="Certificate: Introduction to SQL"></div>
-                    <div class="slide"><img src="images/certificates/SQl_Intermediate.png" alt="Certificate: SQL Intermediate"></div>
-                    <div class="slide"><img src="images/certificates/Intro_HTML.png" alt="Certificate: Introduction to HTML"></div>
-                    <div class="slide"><img src="images/certificates/Intro_CSS.png" alt="Certificate: Introduction to CSS"></div>
-                    <div class="slide"><img src="images/certificates/Intro_JS.png" alt="Certificate: Introduction to JavaScript"></div>
-                    <div class="slide"><img src="images/certificates/JS_Intermediate.png" alt="Certificate: JavaScript Intermediate"></div>
+                <div class="slideshow-dots">
+                    <button class="dot active" data-index="0" aria-label="Band Website"></button>
+                    <button class="dot" data-index="1" aria-label="Lawn Care Demo"></button>
+                    <button class="dot" data-index="2" aria-label="Restaurant Demo"></button>
                 </div>
-                <div class="nav-buttons">
-                    <button class="nav-button" onclick="prevSlide()">&#10094;</button>
-                    <button class="nav-button" onclick="nextSlide()">&#10095;</button>
+            </div>
+
+        </section>
+
+        <section class="intro section-card">
+            <h2>About My Work</h2>
+            <p>
+                My focus is on building real-world technical skills through hands-on projects. I’m currently working on
+                web development, networking, and security-related work with an emphasis on creating clean, functional
+                solutions that solve practical problems.
+            </p>
+        </section>
+
+        <section class="projects section-card" id="projects">
+            <h2>Featured Projects</h2>
+
+            <div class="project-group">
+                <h3>Web Projects</h3>
+                <div class="project-grid">
+
+                    <article class="project-card">
+                        <h4>Band Website</h4>
+                        <p>
+                            A simple static website I built for my former band, featuring music promotion,
+                            social media links, and a basic live dates section.
+                        </p>
+                    </article>
+
+                    <article class="project-card">
+                        <h4>Lawn Care Demo Website</h4>
+                        <p>
+                            A modern small-business website built to showcase services, testimonials, and contact
+                            information for a local lawn care company.
+                        </p>
+                    </article>
+
+                    <article class="project-card">
+                        <h4>Restaurant Demo Website</h4>
+                        <p>
+                            A modern Mexican restaurant demo website featuring menu previews, business branding, 
+                            photo galleries, and customer-focused design.
+                        </p>
+                    </article>
                 </div>
-            </section>
-        </main>
-        <!--Import JavaScript-->
-        <script src="index.js"></script>
-    </body>
+            </div>
+
+            <div class="project-group">
+                <h3>Technical / IT Projects</h3>
+                <div class="project-grid">
+                    <article class="project-card">
+                        <h4>Personal Portfolio Website</h4>
+                        <p>
+                            My personal site used to showcase projects, technical growth, and professional development.
+                        </p>
+                    </article>
+
+                    <article class="project-card">
+                        <h4>Networking & Security Labs</h4>
+                        <p>
+                            Coursework and hands-on practice involving networking tools, Linux, troubleshooting, and
+                            security-focused technical work.
+                        </p>
+                    </article>
+
+                    <article class="project-card">
+                        <h4>More Projects Coming Soon</h4>
+                        <p>
+                            I’m continuing to add web, networking, and IT-related projects as I build my portfolio.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="skills section-card">
+            <h2>Skills</h2>
+
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>Web Development</h3>
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>GitHub</li>
+                    </ul>
+                </div>
+
+                <div class="skill-card">
+                    <h3>IT & Networking</h3>
+                    <ul>
+                        <li>Network Fundamentals</li>
+                        <li>Troubleshooting</li>
+                        <li>Linux Basics</li>
+                        <li>Security Concepts</li>
+                    </ul>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Tools</h3>
+                    <ul>
+                        <li>VS Code</li>
+                        <li>Wireshark</li>
+                        <li>VMware</li>
+                        <li>Linux / Windows Terminal</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="web-services section-card">
+            <h2>Small Business Websites</h2>
+            <p>
+                I’m also building clean, modern websites for small businesses such as lawn care companies, salons,
+                restaurants, and other local service providers. My focus is on fast, professional websites that help
+                businesses look credible and make it easy for customers to get in touch.
+            </p>
+        </section>
+
+        <section class="education section-card">
+            <h2>Education</h2>
+            <p><strong>Kennesaw State University</strong></p>
+            <p>Bachelor’s Degree in Information Technology</p>
+            <p>Cybersecurity Concentration</p>
+            <p>Projected Graduation Date: December 2026</p>
+        </section>
+
+        <section class="cta section-card">
+            <h2>Let’s Connect</h2>
+            <p>
+                Whether you’re an employer reviewing my work or a local business interested in a website, feel free to reach out.
+            </p>
+            <div class="hero-buttons">
+                <a href="./contact.html" class="btn-primary">Contact Me</a>
+            </div>
+        </section>
+    </main>
+
+    <script src="/js/index.js"></script>
+</body>
 </html>
